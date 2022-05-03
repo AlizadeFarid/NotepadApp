@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 mt-3 mx-auto">
+            <form #noteForm="ngForm" (ngSubmit)="onSubmit(noteForm)">
+                <div class="mb-3">
+                    <label for="title" class="form-label"><b>Title</b></label>
+                    <input type="text" name="title" [(ngModel)]="note.title" class="form-control" id="title" required>
+                </div>
+                <div class="mb-3">
+                    <label for="body" class="form-label"><b>Body</b></label>
+                    <textarea name="body" class="form-control" [(ngModel)]="note.body" id="body" rows="4" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+                    <button type="submit" class="btn btn-success ms-2" [disabled]="!noteForm.valid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

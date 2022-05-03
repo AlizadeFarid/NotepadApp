@@ -1,0 +1,25 @@
+form {
+    .btn-success {
+        background: #20C997;
+        border: none;
+        &:hover {
+            background: #17b283;
+        }
+    }
+    .btn-danger {
+        background: #DC3545;
+        border: none;
+        &:hover {
+            background: #ca2c3c;
+        }
+    }
+    input,
+    textarea {
+        &.ng-invalid.ng-touched {
+            border-color: red;
+            &:focus {
+                box-shadow: 0 0 0 2px rgba(red, 0.1);
+            }
+        }
+    }
+}
